@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/modal.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/styles.css" />
+
+    <title>Caio Barbosa Dev.</title>
+</head>
+
+<body>
+    <div class="backgroundLine"></div>
+
+    <header class="header">
+        <div class="headerContainer wrapper">
+            <img class="logo" src="/images/logo.svg" alt="Caio Web Dev." />
+            <nav class="headerMenu">
+                <a href="#home">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrapper">
+        <div class="homeContainer" id="home">
+            <div class="homeLeft">
+                <span class="welcomeMessage">Hello, welcome! 👋</span>
+                <h1>I'm Web <span class="spanDeveloper">Developer</span><span class="spanDot">.</span></h1>
+                <div class="homeLeftButtons">
+                    <a href="#contact" class="hireMeButton button">Hire Me</a>
+                    <a id="downloadButton" class="downloadButton button">Download CV</a>
+                </div>
+            </div>
+            <div class="homeRight">
+                <img src="/images/homeImage.svg" />
+            </div>
+        </div>
+
+        <div class="arrowDownContainer bounce">
+            <img src="/images/arrowDown.svg">
+        </div>
+
+        <div class="aboutContainer" id="about">
+            <div class="aboutContainerLeft">
+                <img class="music" src="/images/music.svg" />
+                <img class="idea" src="/images/idea.svg" />
+                <img class="arrow" src="/images/arrow.svg" />
+
+                <h2>About <span>me</span></h2>
+                <p>Hi, my name is Caio and I'm a Web Developer. I live in São João da Boa Vista, São Paulo, Brazil. I
+                    currently work at a higher education institution called @unifeob and my main role is to design,
+                    develop and maintain web software solutions. I also work as a Freelancer and develop small and
+                    medium solutions using web technologies such as: HTML, CSS, JS, PHP, Yii2, SQL and React JS.
+                    Sometimes I take risks in interface design and social media design. If you have a project in mind I
+                    can help you, contact me.</p>
+            </div>
+            <div class="aboutContainerRight">
+                <img src="/images/aboutImage.svg" />
+            </div>
+        </div>
+
+        <div class="workContainer">
+            <h2>My <span>works</span></h2>
+
+            <div class="workContainerCards">
+                <div class="singleCard">
+                    <img class="singleCardImage" src="/images/open-educacao.png" />
+                    <div class="singleCardDetails">
+                        <strong>OPEN EDUCAÇÃO</strong>
+                        <p>
+                            Project developed with the main objective of sharing knowledge with people from my
+                            university. The look and part of the background of the application was developed by me.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="singleCard">
+                    <img class="singleCardImage" src="/images/design-agency.png" />
+                    <div class="singleCardDetails">
+                        <strong>DESIGN AGENCY</strong>
+                        <p>
+                            Fictitious landing page with the objective of studying and applying in practice the
+                            knowledge acquired in web development courses.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="seeAllWorksButton" id="seeAllWorksButton">
+                    <strong>SEE ALL WORKS</strong>
+                    <span>Click here!</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contactContainer" id="contact">
+            <div class="contactContainerLeft">
+                <h2>Got a project in <span>mind?</span></h2>
+                <img src="/images/contactImage.svg" />
+            </div>
+
+            <form class="contactForm" onsubmit="sendMessageToWhatsApp(event)">
+                <div class="formGroup">
+                    <label for="name">YOUR NAME</label>
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                </div>
+
+                <div class="formGroup">
+                    <label for="email">YOUR EMAIL</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+
+                <div class="formGroup">
+                    <label for="message">YOUR MESSAGE</label>
+                    <textarea name="message" id="message" placeholder="Message" required></textarea>
+                </div>
+
+                <button class="sendMessageButton" id="sendMessageButton">
+                    Send Message
+                    <img src="/images/arrowRightButton.svg" />
+                </button>
+            </form>
+        </div>
+
+        <footer>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#about">About me</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="socialMediaIcons">
+                <a href="https://www.facebook.com/caiohenrique.barbosagarcia" target="_blank">
+                    <img src="/images/facebook.svg" alt="Facebook">
+                </a>
+
+                <a href="https://www.instagram.com/caiobarbosa.h/" target="_blank">
+                    <img src="/images/instagram.svg" alt="Instagram">
+                </a>
+
+                <a href="https://www.linkedin.com/in/caiobarbosag/" target="_blank">
+                    <img src="/images/linkedin.svg" alt="LinkedIn">
+                </a>
+            </div>
+
+            <p>All rights reserved.</p>
+        </footer>
+    </main>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>New projects will be published here soon... Hold!</p>
+            <br>
+            <p>Caio Barbosa Dev.</p>
+        </div>
+    </div>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
+    <script src="/js/redirect.js"></script>
+    <script src="/js/modal.js"></script>
+
+    <script>
+        document.getElementById('downloadButton').addEventListener('click', () => {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Wait!',
+                text: 'You will be redirected to LinkedIn!',
+                showConfirmButton: false,
+                timer: 4000
+            })
+
+            setTimeout(() => {
+                window.open("https://www.linkedin.com/in/caiobarbosag/", "_blank");
+            }, 4000)
+        })
+    </script>
+</body>
+
+</html>
